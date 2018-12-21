@@ -1,15 +1,7 @@
-# python_xlsx
-# read xlsx excel file and collect data
-
-# xlsx.py
-
-# import openpyxl module
 import openpyxl
 
-# import os module
 import os
 
-# change the working directory
 while True:
 		cwd = os.getcwd()
 		wd_ch = input("Working on "+cwd+", do you wish to change? Y/N:")
@@ -30,13 +22,14 @@ while True:
     else:
         print("Error! Please answer 'Yes' or 'No'")
         continue
-# show all the files in working directory
+
 files = []
 print('\n'+"This folder contains following files:"+'\n')
 for filename in os.listdir(cwd_n):
   print(filename)
   files.append(filename)
-# ask the user's purpose
+
+
 while True:
   tar = input('\n'+"What do you want to do? "+'\n'"1=read and modify"+'\n'"2=read and copy to a new"+'\n'"\
   3=read and append to an exist"+'\n'"4=read and compare"+'\n'"5=exit"+'\n'":")
